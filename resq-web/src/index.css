@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,400&family=DM+Sans:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --bg:        #0d0d0f;
+  --surface:   #111113;
+  --surface2:  #151517;
+  --border:    #2a2a2e;
+  --primary:   #e03e3e;
+  --amber:     #e89040;
+  --safe:      #50bb70;
+  --info:      #4a9fff;
+  --text:      #e8e6df;
+  --muted:     #888;
+  --dim:       #555;
+  --font-mono: 'DM Mono', 'Share Tech Mono', monospace;
+  --font-body: 'DM Sans', 'Barlow Condensed', sans-serif;
+  --font-bebas: 'Bebas Neue', sans-serif;
+  --r-sm:  6px;
+  --r-md:  8px;
+  --r-lg: 10px;
+}
+
+html, body, #root { height: 100%; width: 100%; overflow: hidden; background: var(--bg); color: var(--text); font-family: var(--font-body); }
+
+/* Leaflet overrides */
+.leaflet-container { background: #0a0a0c !important; }
+.leaflet-tile-pane {
+  filter: brightness(1.1) sepia(0.55) hue-rotate(310deg) saturate(2) contrast(1.1);
+}
+.leaflet-control-attribution { display: none !important; }
+.leaflet-control-zoom        { display: none !important; }
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 3px; }
+::-webkit-scrollbar-track { background: var(--surface); }
+::-webkit-scrollbar-thumb { background: var(--border); border-radius: 2px; }
+
+/* Animations */
+@keyframes scanline  { 0%{transform:translateY(-100%)} 100%{transform:translateY(100vh)} }
+@keyframes blink     { 0%,100%{opacity:1} 50%{opacity:0} }
+@keyframes fadeIn    { from{opacity:0;transform:translateY(10px)} to{opacity:1;transform:translateY(0)} }
+@keyframes radarSpin { from{transform:rotate(0deg)} to{transform:rotate(360deg)} }
+@keyframes pulse     { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:0.5;transform:scale(0.95)} }
+@keyframes pulseRing { 0%{transform:scale(1);opacity:0.8} 100%{transform:scale(2.2);opacity:0} }
+@keyframes glowPulse { 0%,100%{box-shadow:0 0 14px rgba(224,62,62,0.35)} 50%{box-shadow:0 0 28px rgba(224,62,62,0.7)} }
+@keyframes slideUp   { from{opacity:0;transform:translateY(20px)} to{opacity:1;transform:translateY(0)} }
+@keyframes slideRight{ from{transform:translateX(100%)} to{transform:translateX(0)} }
+@keyframes ripple    { 0%{transform:scale(0.8);opacity:1} 100%{transform:scale(2.4);opacity:0} }
+@keyframes dotPulse  { 0%,100%{opacity:1} 50%{opacity:0.25} }
+@keyframes livePulse { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:0.4;transform:scale(0.8)} }
