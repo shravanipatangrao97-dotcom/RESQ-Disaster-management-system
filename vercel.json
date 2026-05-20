@@ -1,0 +1,6 @@
+{
+  "buildCommand": "cd resq-web && npm install && npm run build",
+  "outputDirectory": "resq-web/dist",
+  "installCommand": "cd resq-web && npm install",
+  "framework": "vite"
+}
