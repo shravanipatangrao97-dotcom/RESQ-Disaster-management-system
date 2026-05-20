@@ -248,3 +248,62 @@
 .drawer-send:disabled { opacity:0.4; cursor:default; }
 
 .blink { animation:blink 1s step-end infinite; }
+
+/* ─── Responsive: Map Page ─────────────────────────────────────────────────── */
+
+/* Tablet */
+@media (max-width: 900px) {
+  .main-area { flex-direction: column; }
+  .sidebar { width: 100%; max-height: 35vh; border-left: none; border-top: 0.5px solid var(--border); }
+  .mapapp-header { padding: 0 14px; height: 46px; gap: 10px; }
+  .logo-name { font-size: 18px; }
+  .filter-bar { padding: 6px 12px; gap: 4px; }
+  .filter-pill { padding: 3px 10px; font-size: 9px; }
+  .left-alerts { max-width: 200px; }
+  .alert-card { padding: 8px 10px; }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .mapapp-header { padding: 0 10px; height: 42px; gap: 6px; }
+  .logo-name { font-size: 16px; letter-spacing: 2px; }
+  .logo-sub { font-size: 7px; }
+  .live-pill { padding: 2px 7px; font-size: 8px; }
+  .hdr-actions { gap: 5px; }
+  .icon-btn { width: 30px; height: 30px; }
+  .sos-btn { height: 30px; padding: 0 10px; font-size: 9px; }
+
+  .filter-bar { padding: 5px 10px; gap: 3px; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+  .filter-pill { padding: 3px 8px; font-size: 8px; }
+
+  .main-area { flex-direction: column; }
+
+  /* Sidebar → bottom drawer */
+  .sidebar {
+    width: 100%; max-height: 40vh;
+    border-left: none; border-top: 0.5px solid var(--border);
+    order: 2;
+  }
+  .sidebar-header { padding: 8px 10px; }
+  .sidebar-title { font-size: 9px; }
+
+  /* Left alert overlays — compact */
+  .left-alerts { max-width: 180px; gap: 4px; top: 6px; left: 6px; }
+  .alert-card { padding: 6px 8px; }
+  .alert-card .alert-loc { font-size: 9px; }
+  .alert-card .alert-body { font-size: 10px; }
+  .alert-card .alert-meta { font-size: 8px; }
+
+  /* Legend */
+  .map-legend { bottom: 50px; left: 6px; padding: 6px 8px; }
+
+  /* Status bar */
+  .map-statusbar { padding: 0 10px; font-size: 8px; height: 22px; }
+
+  /* Report button */
+  .report-btn { right: 10px; bottom: 55px; padding: 8px 14px; font-size: 10px; }
+
+  /* AI drawer — full width on mobile */
+  .ai-drawer { width: 100%; }
+  .ai-drawer-header { padding: 10px 12px; }
+}
